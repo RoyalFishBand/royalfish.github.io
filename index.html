@@ -44,6 +44,12 @@
 				color:#f8f06f;
 			}
 			
+			button {
+				border: none !important;
+				background-img: url("https://royalfishband.github.io/mus.png");
+				background-color:white;
+			}
+			
         </style>
     </head>
     <body>
@@ -51,7 +57,11 @@
             <br>
             <a href="https://royalfishband.github.io"><img src="logo.png"></a>
 			<br>
+			 <audio id="myAudio" src="https://royalfishband.github.io/wiki.mp3"></audio>
+				<img src="https://royalfishband.github.io/mus.png" onClick="togglePlay()">
 			<br>
+			<div>
+			</div>
 			<br>
 			<img src="https://royalfishband.github.io/divider.png">			
             <h2>𓆟.-'THE REALM OF FISHLY KNOWLEDGE'-.𓆟</h2>
@@ -83,6 +93,23 @@
 			<a href="https://royalfish.neocities.org/"><img src="https://royalfishband.github.io/microbanners/royalfish.png"></a>
 			<br>
 			<br>
-		</div>
+  
+<script>
+var myAudio = document.getElementById("myAudio");
+var isPlaying = false;
+
+function togglePlay() {
+  isPlaying ? myAudio.pause() : myAudio.play();
+	myAudio.loop=true;
+};
+
+myAudio.onplaying = function() {
+  isPlaying = true;
+};
+myAudio.onpause = function() {
+  isPlaying = false;
+};
+</script>
+</div>
     </body>
 </html>
